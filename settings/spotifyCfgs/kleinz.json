@@ -1,0 +1,30 @@
+{
+    "IMAGES": {
+        "#largeImageID": "REQUIRED, It must be a spotify image ID",
+        "largeImageID": "ab67706c0000da848b9fe650fa5acd7f31c1f5ba",
+        "#smallImageID": "OPTIONAL, It must be a spotify image ID",
+        "smallImageID": ""
+    },
+    "ALBUM": {
+        "#albumName": "REQUIRED",
+        "albumName": "v1.0"
+    },
+    "ARTISTS": {
+        "#artistsName": "REQUIRED, separed by a ';'",
+        "artistsName": "Fleinz.",
+        "#artistsID": "OPTIONAL",
+        "artistsID": ""
+    },
+    "SONG": {
+        "#songName": "REQUIRED",
+        "songName": "Kleinz",
+        "#songID": "OPTIONAL",
+        "songID": "086THPnabbu1zfDjRsxpoN"
+    },
+    "SONG_LENGHT": {
+        "#minutesSongDuration": "REQUIRED",
+        "minutesSongDuration": 6,
+        "#secondsSongDuration": "REQUIRED",
+        "secondsSongDuration": 9
+    }
+}

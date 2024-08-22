@@ -1,0 +1,30 @@
+{
+    "IMAGES": {
+        "#largeImageID": "REQUIRED, It must be a spotify image ID",
+        "largeImageID": "",
+        "#smallImageID": "OPTIONAL, It must be a spotify image ID",
+        "smallImageID": ""
+    },
+    "ALBUM": {
+        "#albumName": "REQUIRED",
+        "albumName": ""
+    },
+    "ARTISTS": {
+        "#artistsName": "REQUIRED, separed by a ';'",
+        "artistsName": "",
+        "#artistsID": "OPTIONAL",
+        "artistsID": ""
+    },
+    "SONG": {
+        "#songName": "REQUIRED",
+        "songName": "",
+        "#songID": "OPTIONAL",
+        "songID": ""
+    },
+    "SONG_LENGHT": {
+        "#minutesSongDuration": "REQUIRED",
+        "minutesSongDuration": 0,
+        "#secondsSongDuration": "REQUIRED",
+        "secondsSongDuration": 0
+    }
+}

@@ -1,0 +1,27 @@
+{
+  "name": "kleinz",
+  "version": "1.0.0",
+  "description": "Selfbot for discord",
+  "main": "index.js",
+  "scripts": {
+    "test": "node index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "$"
+  },
+  "keywords": [
+    "selfbot",
+    "discord"
+  ],
+  "author": "fleinz.",
+  "license": "ISC",
+  "dependencies": {
+    "@discordjs/voice": "^0.16.1",
+    "colors": "^1.4.0",
+    "discord.js-selfbot-v13": "2.14.6",
+    "glob": "7.2.0",
+    "http": "0.0.1-security",
+    "path": "0.12.7"
+  }
+}

@@ -1,0 +1,30 @@
+{
+    "IMAGES": {
+        "#largeImageID": "REQUIRED, It must be a spotify image ID",
+        "largeImageID": "ab67706c0000da8436ad22abf20b364da31a74b1",
+        "#smallImageID": "OPTIONAL, It must be a spotify image ID",
+        "smallImageID": ""
+    },
+    "ALBUM": {
+        "#albumName": "REQUIRED",
+        "albumName": "La Car à Vanne"
+    },
+    "ARTISTS": {
+        "#artistsName": "REQUIRED, separed by a ';'",
+        "artistsName": "Evan",
+        "#artistsID": "OPTIONAL",
+        "artistsID": "uj0jzf6kqidwmyvq60btvf0xp"
+    },
+    "SONG": {
+        "#songName": "REQUIRED",
+        "songName": "Mon père le locateur",
+        "#songID": "OPTIONAL",
+        "songID": "086THPnabbu1zfDjRsxpoN"
+    },
+    "SONG_LENGHT": {
+        "#minutesSongDuration": "REQUIRED",
+        "minutesSongDuration": 6,
+        "#secondsSongDuration": "REQUIRED",
+        "secondsSongDuration": 9
+    }
+}
