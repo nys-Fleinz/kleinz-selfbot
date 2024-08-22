@@ -1,0 +1,18 @@
+{
+    "account": {
+        "TOKEN": "",
+        "prefix": "."
+    },
+    "API": {
+        "rateLimit": 0,
+        "#rateLimit": "Limit of requests per second. Set 0 for no rate limit. (Not recommended)"
+    },
+    "RPC": {
+        "spotify_defaultFileName": "kleinz",
+        "customRPC_defaultFileName": "kleinz"
+    },
+    "connection": {
+        "checkDevicesConnected": true,
+        "#checkDevicesConnected": "if its true, it will send request every 1 minute to get devices connected to your account, if a device is not at location it will change the password of your account and disconnect all users."
+    }
+}
