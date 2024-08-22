@@ -7,7 +7,7 @@ module.exports = async (client) => {
         const cmd = require(cmdFile);
         client.commands.set(cmd.name, cmd)
 
-        if(!cmd.name || !cmd.description) return console.log(`Name or Description missing for this command: ${cmdFile}`)
+        if(!cmd.name || !cmd.description || cmd.name == "" || cmd.description == "") return console.log(`Name or Description missing for this command: ${cmdFile}`)
         if(!cmd.permissions) return console.log(`~~~~~~\nNo permissions set for: ${cmd.name} at ${cmdFile}\n~~~~~~`)
         cmd.permissions.forEach(permission => {
             if(!permissionList.includes(permission)) return console.log(`~~~~~~\nTyping error in permissions was set to the command: "${cmd.name.toUpperCase()}" Path: ${cmdFile}\n~~~~~~`)

@@ -20,7 +20,7 @@ module.exports = {
         try {
             if (message.channel.type == "DM" || message.channel.type == "GROUP_DM") {
                 if (cmd.canExecuteInDM == false) {
-                    console.log(info, "Can't execute this command in DM.".red);
+                    console.log(X, "Can't execute this command in DM.".red);
                     return message.delete();
                 } else {
                     if (cmd) {
