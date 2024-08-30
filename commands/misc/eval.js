@@ -8,12 +8,10 @@ module.exports = {
     usage: "eval <cmd>",
     examples: ["eval client.cache"],
     description: "Evaluate a cmd (await is used)",
-    run: async (client, message, args, X, info, success) => {
+    run: async (client, message, args, kleinz) => {
         args = args.join(" ");
-        console.log(success, "Executing:".blue, args.green)
-
+        console.log(kleinz.console.success, "Executing:".blue, args.green)
         try {
-
             let result = await new Function('client', 'message', 'args', `return ${args}`)(client, message, args);
 
 
@@ -23,13 +21,13 @@ module.exports = {
 
             if(result == undefined) {
                 result = "undefined"
-            } 
-            
-            if(result.match(/[a-zA-Z0-9]/g).length > 2000) {
+            }
+            console.log("LENGHT:", result.length)
+            if(result.length > 1900) {
                 message.channel.send('The result is over 2000 characters. See console.')
                 console.log(result)
             } else {
-                message.channel.send(`\`\`\`js\n${result}\n\`\`\``);
+                message.edit(`\`\`\`ansi\n\u001b[0;34m[>] \u001b[0;32m${args}\n\`\`\`\n\`\`\`js\n${result}\n\`\`\``);
             }
 
             

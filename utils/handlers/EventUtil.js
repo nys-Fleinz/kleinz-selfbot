@@ -9,6 +9,7 @@ module.exports = async (client) => {
         if (event.once) {
             client.once(event.name, (...args) => event.execute(client, ...args))
         } else {
+            console.log(event.name)
             client.on(event.name, (...args) => event.execute(client, ...args))
         }
     })

@@ -35,9 +35,9 @@ module.exports = {
         } if (args[0] === "list") {
             message.edit(`\`\`\`ansi
 \u001b[0;33m----------- \u001b[0;35mSPOTIFY CONFIGS \u001b[0;33m-----------
-\u001b[0;36m -> ${fs.readdirSync(directoryPath).join("\n\u001b[0;36m -> ")}
-
-\u001b[0;33m---------------------------------------\`\`\``)
+\u001b[0;36m [>] ${fs.readdirSync(directoryPath).join("\n\u001b[0;36m [>] ")}
+\u001b[0;33m---------------------------------------
+\u001b[0;30m[!] Type "spotify load [name]" to load\`\`\``)
 
         } else {
             message.delete();
