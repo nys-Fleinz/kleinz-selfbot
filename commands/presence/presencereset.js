@@ -6,9 +6,9 @@ module.exports = {
     usage: "presencereset",
     examples: ["presencereset"],
     description: "Reset your presence. It takes a short moment.",
-    run: async (client, message, args, X, info, success) => {
+    run: async (client, message, args, kleinz) => {
         await message.delete();
         client.user.setActivity(null)
-        console.log(success, "Presence has been clear.".green)
+        console.log(kleinz.console.success, "Presence has been clear.".green)
     },
 };

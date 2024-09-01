@@ -16,12 +16,12 @@ module.exports = {
         ];
 
         let guildId = message.guild.id
-        console.log(info, "Getting guild...".yellow)
+        console.log(kleinz.console.info, "Getting guild...".yellow)
         const guild = await client.guilds.fetch(guildId)
-        console.log(success, "Guild:".blue, guild.name.green)
-        console.log(info, "Getting role...".yellow)
+        console.log(kleinz.console.success, "Guild:".blue, guild.name.green)
+        console.log(kleinz.console.info, "Getting role...".yellow)
         const role = await guild.roles.cache.find((r) => r.id === '1276190436049944606');
-        console.log(success, "Role:".blue, role.name.green)
+        console.log(kleinz.consolesuccess, "Role:".blue, role.name.green)
         for (const color in rgbColors) {
             role.edit({ "color": rgbColors[color] })
             await new Promise(resolve => setTimeout(resolve, 4000))

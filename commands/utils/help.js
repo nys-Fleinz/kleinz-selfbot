@@ -9,7 +9,7 @@ module.exports = {
     usage: "help <command>",
     examples: ["help", "help embed"],
     description: "Need help D:",
-    run: (client, message, args, X, info, success) => {
+    run: (client, message, args, kleinz) => {
         const help = {};
         if (!args.length) {
             for (const category of commandFolder) {
@@ -22,7 +22,7 @@ module.exports = {
             message.edit(`${formattedHelp}`);
         } else {
             const cmd = client.commands.get(args[0].toLowerCase());
-            if (cmd == undefined) return message.edit(X, "This command does not exist.".red)
+            if (cmd == undefined) return message.edit(kleinz.console.X, "This command does not exist.".red)
 
             message.edit(`\`\`\`ansi
 \u001b[0;33m----------- \u001b[0;35m${cmd.name.replace(/(^\w|\s\w)/g, e => e.toUpperCase())} \u001b[0;33m-----------

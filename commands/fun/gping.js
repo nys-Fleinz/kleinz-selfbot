@@ -6,7 +6,7 @@ module.exports = {
     usage: "gping <amount> [mention/id]",
     examples: ["gping 15 @Kleinz"],
     description: "Pong :D",
-    run: async (client, message, args, X, info, success) => {
+    run: async (client, message, args, kleinz) => {
         message.delete();
 
         let mentionString = '';

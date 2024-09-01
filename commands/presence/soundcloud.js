@@ -8,7 +8,7 @@ module.exports = {
     usage: "soundcloud [title], <author>, <link>",
     examples: ["soundcloud title: YEEHAW", "soundcloud title: naht3 is cool, author: Kleinz, link: https://souncdcloud.com"],
     description: "Set presence to a soundcloud activity.",
-    run: async (client, message, args, X, info, success) => {
+    run: async (client, message, args, kleinz) => {
         await message.delete();
 
         const allParameters = args.join(' ');
@@ -31,7 +31,7 @@ module.exports = {
         } catch {
             var author = "";
         }
-        if(!title) return console.log(info, "Set a title at least".yellow)
+        if(!title) return console.log(kleinz.console.info, "Set a title at least".yellow)
         if(author) soundcloudPresence.setState(`By ${author}`)
         soundcloudPresence.setName("SoundCloud")
         soundcloudPresence.setDetails(title)
@@ -40,12 +40,12 @@ module.exports = {
 
         try {
             client.user.setActivity(twitchPresence)
-            console.log(success, `${'Presence for'.green} ${client.user.username.blue} ${"was set to:".green}
+            console.log(kleinz.console.success, `${'Presence for'.green} ${client.user.username.blue} ${"was set to:".green}
  ${"- Title:".green} ${title.yellow}
  ${"- Author:".green} ${author.yellow}
  ${"- Link:".green} ${link.yellow}`)
         } catch {
-            return console.log(info, "There was a problem when applying your presence.".yellow)
+            return console.log(kleinz.console.info, "There was a problem when applying your presence.".yellow)
         }
         client.user.setActivity(soundcloudPresence);
     },

@@ -8,7 +8,7 @@ module.exports = {
     usage: "presencelist",
     examples : ["presencelist"],
     description: "List all presences config.",
-    run: async (client, message, args, X, info, success) => {
+    run: async (client, message, args, kleinz) => {
         const arrayFiles = []
         const presenceFolder = './settings/presences/';
 
@@ -23,7 +23,7 @@ module.exports = {
             
             \u001b[0;33m----------------------------------------\`\`\``)
         } catch {
-            console.log(X, "Error while listing cfgs.".red)
+            console.log(kleinz.console.X, "Error while listing cfgs.".red)
         }
         
     }

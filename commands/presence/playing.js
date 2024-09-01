@@ -9,7 +9,7 @@ module.exports = {
     usage: "playing [game]",
     examples : ["playing Team Fortress 2"],
     description: "Set your current activity to a playing acitvity.",
-    run: async (client, message, args, X, info, success) => {
+    run: async (client, message, args, kleinz) => {
         const kleinzRcp = new RichPresence()
             .setApplicationId('817229550684471297')
             .setType('PLAYING')

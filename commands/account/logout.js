@@ -6,7 +6,7 @@ module.exports = {
     usage: "logout",
     examples : ["logout"],
     description: "Log out everyone and change token account.",
-    run: (client, message, args, X, info, success) => {
+    run: (client, message, args, kleinz) => {
         try {
             client.logout()
         } catch(error) {

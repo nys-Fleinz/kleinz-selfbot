@@ -6,7 +6,7 @@ module.exports = {
     usage: "banall <reason>",
     examples: ["banall Kleinz is the best :D"],
     description: "Ban every possible member in the server.",
-    run: async (client, message, args) => {
+    run: async (client, message, args, kleinz) => {
       try {
         const guild = message.guild;
         message.delete();

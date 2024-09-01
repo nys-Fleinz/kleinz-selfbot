@@ -4,7 +4,7 @@ module.exports = {
     name: "stop",
     permissions: ['SEND_MESSAGES'],
     canExecuteInDM: true,
-    category: "selfbot",
+    category: "utils",
     usage: "stop",
     examples: ["stop"],
     description: "Stop selfbot",

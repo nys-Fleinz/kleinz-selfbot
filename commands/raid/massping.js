@@ -6,7 +6,7 @@ module.exports = {
     usage: "massping",
     examples : ["massping"],
     description: "Pong :D",
-    run: async (client, message, args, X, info, success) => {
+    run: async (client, message, args, kleinz) => {
         const guild = message.guild;
         const users = await guild.members.fetch();
         const userArray = Array.from(users.values());
@@ -28,7 +28,7 @@ module.exports = {
             }
             if (mentionMessage.length == 95 || mentionCount == userArray.length-numberOfBots) {
                 message.channel.send(mentionMessage.join(""))
-                console.log(success, "message sent!".green)
+                console.log(kleinz.console.success, "message sent!".green)
                 mentionCount = 0;
                 mentionMessage = []
             }

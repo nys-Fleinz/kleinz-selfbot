@@ -8,7 +8,7 @@ module.exports = {
     usage: "call @user",
     examples : ["call", "call @Kleinz"],
     description: "Start a call",
-    run: async (client, message, args, X, info, success) => {
+    run: async (client, message, args, kleinz) => {
         message.delete()
         let cId = "";
         if(message.guildId === null) {
@@ -23,10 +23,10 @@ module.exports = {
         
         try { let connection = await dmChannel.call(); } catch (error) {
             console.log(error)
-            return console.log(info, "Mention the user you want to call.".yellow)
+            return console.log(kleinz.console.info, "Mention the user you want to call.".yellow)
         }
         console.clear()
-        console.log(success, `Calling https://discord.com/channels/@me/${cId}`.green)
+        console.log(kleinz.console.success, `Calling https://discord.com/channels/@me/${cId}`.green)
 
     }
 }

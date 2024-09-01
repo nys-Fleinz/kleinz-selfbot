@@ -8,7 +8,7 @@ module.exports = {
     usage: "twitch [title], <author>, <link>",
     examples: ["twitch title: YEEHAW", "twitch title: Fleinz is cool, author: Kleinz, link: https://souncdcloud.com"],
     description: "Set presence to a twitch activity.",
-    run: async (client, message, args, X, info, success) => {
+    run: async (client, message, args, kleinz) => {
         await message.delete();
 
         const allParameters = args.join(' ');
@@ -48,7 +48,7 @@ module.exports = {
         if(link) twitchPresence.addButton('Join Stream', link)
         try {
             client.user.setActivity(twitchPresence)
-            console.log(success, `${'Presence for'.green} ${client.user.username.blue} ${"was set to:".green}
+            console.log(kleinz.console.success, `${'Presence for'.green} ${client.user.username.blue} ${"was set to:".green}
  ${"- Title:".green} ${title.yellow}
  ${"- Description:".green} ${description.yellow}
  ${"- Author:".green} ${author.yellow}

@@ -9,7 +9,7 @@ module.exports = {
     usage: 'devices',
     examples: ['devices'],
     description: 'Send all devices connected to your account.',
-    run: async (client, message, args, X, info, success) => {
+    run: async (client, message, kleinz) => {
         message.delete();
         let numberOfDevices = -1;
         // MAKE REQUEST

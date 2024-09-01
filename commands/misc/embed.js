@@ -9,7 +9,7 @@ module.exports = {
     examples: ["embed title: Baguette is cool, author: Kleinz, color: RED, description: Kitty :3, image: https://tinyurl.com/nseuyyc4, provider: Kleinz", "embed title: Baguette is cool, author: Kleinz, color: RED, description: Kitty :3, thumbnail: https://tinyurl.com/nseuyyc4, provider: Kleinz"],
     description: "Make embed.",
     
-    run: async (client, message, args, X, info, success) => {
+    run: async (client, message, args, kleinz) => {
         message.delete();
 
         async function deleteMessage(me) {

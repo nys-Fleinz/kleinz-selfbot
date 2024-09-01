@@ -8,7 +8,7 @@ module.exports = {
     usage: "presenceinfo <user>",
     examples: ["presenceinfo @Kleinz"],
     description: "Get informations about a presence.",
-    run: async (client, message, args) => {
+    run: async (client, message, args, kleinz) => {
         await message.delete();
         const user = message.author;
         const member = message.guild.members.cache.get(user.id);
