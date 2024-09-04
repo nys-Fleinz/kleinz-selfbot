@@ -21,7 +21,7 @@ module.exports = {
                     return message.delete();
                 } else {
                     if (cmd) {
-                        console.log("[".magenta+"$".blue+"]".magenta, `(DM) Executed ${cmd.name}.`.blue.italic)
+                        console.log(kleinz.console.run, `[DM]`.red, `Executed ${cmd.name}.`.blue.italic)
                         cmd.run(client, message, args, kleinz);
                     }
                 }
@@ -31,7 +31,7 @@ module.exports = {
                     return message.delete();
                 } else {
                     if (cmd) {
-                        console.log("[".magenta+"$".blue+"]".magenta, `Executed ${cmd.name}.`.blue.italic)
+                        console.log(kleinz.console.run, `Executed ${cmd.name}.`.blue.italic)
                         cmd.run(client, message, args, kleinz);
                     }
                 }

@@ -820,7 +820,7 @@ module.exports = {
             if (error) console.log("Error while resizing window.", error)
         })
 
-        const delay = 200
+        const delay = 50
 
         function displayFrame(frame, index) {
             console.clear()
