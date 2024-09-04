@@ -5,7 +5,7 @@
     },
     "API": {
         "rateLimit": 0,
-        "#rateLimit": "Limit of requests per second. Set 0 for no rate limit. (Not recommended)"
+        "#rateLimit": "Limit of requests per second. Set 0 for no rate limit."
     },
     "RPC": {
         "spotify_defaultFileName": "kleinz",
