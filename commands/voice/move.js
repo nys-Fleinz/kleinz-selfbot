@@ -35,7 +35,7 @@ module.exports = {
         if (!voiceChannel || !voiceChannel.isVoice()) return console.log(kleinz.console.X, "Impossible de trouver le salon vocal".red);
         if (voiceChannel.guild.id !== guildId) return console.log(kleinz.console.X, "Impossible de bouger un utilisateur sur un serveur différent".red);
 
-        let status = await user.voice.setChannel(voiceChannel);
+        await user.voice.setChannel(voiceChannel);
 
         console.log(kleinz.console.success, `${user.displayName} a été déplacé dans ${voiceChannel.name}.`.green);
     }

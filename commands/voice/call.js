@@ -19,7 +19,7 @@ module.exports = {
         }
         const dmChannel = client.channels.cache.get(cId);
         
-        try { let connection = await dmChannel.call(); } catch (error) {
+        try { await dmChannel.call(); } catch (error) {
             console.log(error)
             return console.log(kleinz.console.info, "Mention the user you want to call.".yellow)
         }
