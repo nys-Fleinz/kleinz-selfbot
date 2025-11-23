@@ -1,5 +1,3 @@
-const { joinVoiceChannel } = require("@discordjs/voice");
-const { MessageFlags } = require("discord.js-selfbot-v13");
 module.exports = {
     name: "call",
     permissions: ['SEND_MESSAGES'],
@@ -25,7 +23,6 @@ module.exports = {
             console.log(error)
             return console.log(kleinz.console.info, "Mention the user you want to call.".yellow)
         }
-        console.clear()
         console.log(kleinz.console.success, `Calling https://discord.com/channels/@me/${cId}`.green)
 
     }
