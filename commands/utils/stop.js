@@ -1,4 +1,4 @@
-const { exec } = require("node:child_process")
+const {exec} = require("node:child_process")
 
 module.exports = {
     name: "stop",
@@ -8,7 +8,7 @@ module.exports = {
     usage: "stop",
     examples: ["stop"],
     description: "Stop selfbot",
-    run: async (client, message, args) => {
+    run: async (client, message) => {
         console.clear()
         frames = [
             "  \r\n" +
@@ -280,7 +280,6 @@ module.exports = {
             " ",
 
 
-
             "  \r\n" +
             "                  *     ,MMM8&&&.            *\r\n" +
             "                       MMMM88&&&&&    .\r\n" +
@@ -304,7 +303,6 @@ module.exports = {
             "       |  |  |  |  |  |  |  |\\)|  |  |  |  |  |  | \r\n" +
             "       |  |  |  |  |  |  |  |  |  |  |  |  |  |  | \r\n" +
             " ",
-
 
 
             "  \r\n" +
@@ -429,7 +427,6 @@ module.exports = {
             "       |  |  |  |  |  |  | (/  |  |  |  |  |  |  | \r\n" +
             "       |  |  |  |  |  |  |  |  |  |  |  |  |  |  | \r\n" +
             " ",
-
 
 
             "  \r\n" +
@@ -481,8 +478,6 @@ module.exports = {
             " ",
 
 
-
-
             "  \r\n" +
             "                  *     ,MMM8&&&.            *\r\n" +
             "                       MMMM88&&&&&    .\r\n" +
@@ -531,7 +526,6 @@ module.exports = {
             "       |  |  |  |  |  |  |  |\\)|  |  |  |  |  |  | \r\n" +
             "       |  |  |  |  |  |  |  |  |  |  |  |  |  |  | \r\n" +
             " ",
-
 
 
             "  \r\n" +
@@ -658,7 +652,6 @@ module.exports = {
             " ",
 
 
-
             "  \r\n" +
             "                  *     ,MMM8&&&.            *\r\n" +
             "                       MMMM88&&&&&    .\r\n" +
@@ -684,7 +677,6 @@ module.exports = {
             " ",
 
 
-
             "  \r\n" +
             "                  *     ,MMM8&&&.            *\r\n" +
             "                       MMMM88&&&&&    .\r\n" +
@@ -708,8 +700,6 @@ module.exports = {
             "       |  |  |  |  |  |  |  |  |  |  |  |  |  |  | \r\n" +
             "       |  |  |  |  |  |  |  |  |  |  |  |  |  |  | \r\n" +
             " ",
-
-
 
 
             "  \r\n" +
@@ -813,28 +803,25 @@ module.exports = {
 
         client.user.setActivity(null)
         await message.delete();
-        exec('scripts\\foreground.exe "Kleinz SelfBot"', (error, stdout) => {
+        exec('scripts\\foreground.exe "Kleinz SelfBot"', (error) => {
             if (error) console.log("Error while bringing window to front.", error)
         })
-        exec('scripts\\resize.exe "Kleinz SelfBot" 600 550', (error, stdout) => {
+        exec('scripts\\resize.exe "Kleinz SelfBot" 600 550', (error) => {
             if (error) console.log("Error while resizing window.", error)
         })
 
-        const delay = 50
+        const sleep = (ms) => new Promise(resolve => setTimeout(resolve, ms));
+        const delay = 100
 
-        function displayFrame(frame, index) {
-            console.clear()
-            console.log(frame);
-            if (index < frames.length - 1) {
-                setTimeout(() => displayFrame(frames[index + 1], index + 1), delay);
-            }
-            if(index == "31") {
-                process.exit({code: 69})
+        console.clear()
+        async function displayFrames() {
+            for (let string of frames) {
+                console.log(string);
+                await sleep(delay);
             }
         }
 
-
-
-        displayFrame(frames[0], 0)
+        await displayFrames();
+        process.exit(0);
     }
 }
